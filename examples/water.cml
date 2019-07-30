@@ -1,0 +1,12 @@
+<cml xmlns="http://www.xml-cml.org/schema">
+<molecule xmlns="http://www.xml-cml.org/schema" StdInChiKey="XLYOFNOQVPJJNP-UHFFFAOYSA-N" id="XLYOFNOQVPJJNP-UHFFFAOYSA-N" xsi:schemaLocation="http://www.xml-cml.org/schema http://www-hunter.ch.cam.ac.uk/cmlschema.xsd http://www-hunter.ch.cam.ac.uk/SSIP http://www-hunter.ch.cam.ac.uk/SSIP.xsd">
+    <atomArray>
+        <atom elementType="O" id="a1" x3="0.0" y3="0.0" z3="0.119748"/>
+        <atom elementType="H" id="a2" x3="0.0" y3="0.761561" z3="-0.478993"/>
+        <atom elementType="H" id="a3" x3="0.0" y3="-0.761561" z3="-0.478993"/>
+    </atomArray>
+    <bondArray>
+        <bond atomRefs2="a1 a2" order="1"/>
+        <bond atomRefs2="a1 a3" order="1"/>
+    </bondArray>
+</molecule>
