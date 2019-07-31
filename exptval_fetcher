@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Jul 31 11:20:55 2019
+
+@author: sc2195
+"""
+from experimental_vals import fetchexptval
+
+methods = ['MNDO', 'AM1', 'PM3', 'PM6', 'MNDOD', 'PM7']
+
+for n in range(len(methods)):
+    print('Adding values for {:}'.format(methods[n]))
+    print('{:} files not available\n'.format(fetchexptval(methods[n])))
