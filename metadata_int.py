@@ -16,9 +16,8 @@ def fetchexptval(method):
     with open('results_{:}.csv'.format(method), 'r') as db:
         reader = csv.reader(db)
         for row in reader:
-            
+            alpha, beta, function = None, None, None
             with open('nicola/_{:}.metadata'.format(row[0]), 'r') as f:
-                 alpha, beta = None, None
                  lineList = f.readlines()
                  dataList = [i.split('     ') for i in lineList]
                  for d in dataList:
@@ -26,12 +25,14 @@ def fetchexptval(method):
                            beta = float(d[1].strip())
                       elif d[0] == 'ExpAlpha':
                            alpha = float(d[1].strip())
+                      elif 'OldClassType' in d[0]:
+                           function = d[0].strip().split('  ')[2]
             
-            row.extend([alpha, beta])
+            row.extend([alpha, beta, function])
             lines.append(row)
     db.close()
     
-    with open('results_{:}_exp.csv'.format(method), 'w') as writeFile:
+    with open('jmolresults_{:}_exp.csv'.format(method), 'w') as writeFile:
         writer = csv.writer(writeFile)
         writer.writerows(lines)
     writeFile.close()
